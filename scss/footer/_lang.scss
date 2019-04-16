@@ -1,0 +1,21 @@
+.lang {
+  &__list {
+    @include flex(center, center);
+  }
+  &__item {
+    padding: 0 13px;
+    & > a {
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: $color-lightblue2;
+      text-decoration: none;
+      &:hover,
+      &.active {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+
+}

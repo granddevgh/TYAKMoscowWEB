@@ -1,0 +1,16 @@
+.copyright {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  color: $color-lightblue2;
+  text-align: center;
+  margin: 40px 0;
+  @media (max-width: 992px) {
+    //margin-top: 20px;
+    text-align: center;
+  }
+  @media (max-width: 667px) {
+    margin-top: 10px;
+    text-align: center;
+  }
+}

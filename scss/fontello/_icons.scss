@@ -1,0 +1,210 @@
+.icon {
+  font-family: $fontello-font-name;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon_lg {
+  font-size: 4em;
+}
+.icon_xlg {
+  font-size: 3.5em;
+}
+.icon_md {
+  font-size: 3em;
+}
+.icon_sm {
+  font-size: 2em;
+}
+.icon_xs {
+  font-size: 1.2em;
+  line-height: 1.85em;
+}
+
+.icon_xxs {
+  font-size: 1.0em;
+  //line-height: .75em;
+}
+
+
+.icon-location {
+  @include fontello('\e810');
+}
+.icon-location-outline {
+  @include fontello('\e800');
+}
+.icon-clipboard {
+  @include fontello('\e811');
+}
+
+
+.icon-search {
+  @include fontello('\e801');
+}
+
+.icon-phone {
+  @include fontello('\e802');
+  transform: rotate(25deg);
+}
+
+.icon-star {
+  @include fontello('\e81c');
+}
+.icon-star-1 {
+  @include fontello('\e81d');
+}
+
+.icon-user-1 {
+  @include fontello('\e80e');
+}
+
+
+.icon-play {
+  @include fontello('\e803');
+}
+.icon-play-1 {
+  @include fontello('\e80a');
+}
+
+
+.icon-facebook {
+  @include fontello('\f09a');
+}
+.icon-youtube-play {
+  @include fontello('\f16a');
+}
+.icon-instagram {
+  @include fontello('\f16d');
+}
+.icon-instagram-1 {
+  @include fontello('\f32d');
+}
+
+.icon-vkontakte {
+  margin-left: -3px;
+  @include fontello('\f189');
+}
+.icon-odnoklassniki {
+  @include fontello('\f263');
+}
+.icon-vkontakte-rect {
+  @include fontello('\f30a');
+}
+/*
+. {
+  @include fontello('\');
+}
+*/
+
+
+
+.icon-down-open{
+  @include fontello('\e804');
+} /* '' */
+.icon-up-open{
+  @include fontello('\e805');
+} /* '' */
+.icon-left-open{
+  @include fontello('\e806');
+} /* '' */
+.icon-right-open{
+  @include fontello('\e807');
+} /* '' */
+.icon-left-dir{
+  @include fontello('\e808');
+} /* '' */
+.icon-up-dir{
+  @include fontello('\e809');
+} /* '' */
+.icon-down-dir-1{
+  @include fontello('\e80b');
+} /* '' */
+.icon-right-dir-1{
+  @include fontello('\e80c');
+} /* '' */
+.icon-down-open-mini{
+  @include fontello('\e80d');
+} /* '' */
+
+.icon-user-1{
+  @include fontello('\e80e');
+} /* '' */
+.icon-volume-up{
+  @include fontello('\e80f');
+} /* '' */
+.icon-location-1{
+  @include fontello('\e810');
+} /* '' */
+
+.icon-clipboard{
+  @include fontello('\e811');
+} /* '' */
+.icon-rss-alt{
+  @include fontello('\e812');
+} /* '' */
+.icon-search-1{
+  @include fontello('\e813');
+} /* '' */
+.icon-align-left{
+  @include fontello('\e814');
+} /* '' */
+.icon-left-open-mini{
+  @include fontello('\e815');
+} /* '' */
+.icon-right-open-mini{
+  @include fontello('\e816');
+} /* '' */
+.icon-up-open-mini{
+  @include fontello('\e817');
+} /* '' */
+.icon-down-open-big{
+  @include fontello('\e818');
+} /* '' */
+.icon-left-open-big{
+  @include fontello('\e819');
+} /* '' */
+.icon-right-open-big{
+  @include fontello('\e81a');
+} /* '' */
+.icon-up-open-big{
+  @include fontello('\e81b');
+} /* '' */
+
+
+
+.icon-mail{
+  @include fontello('\e81d');
+}
+
+.icon-mail-1{
+  @include fontello('\e81e');
+}
+
+.icon-mail-2{
+  @include fontello('\e81f');
+}
+.icon-mail-3{
+  @include fontello('\e821');
+}
+
+.icon-clock{
+  @include fontello('\e820');
+}
+
+.icon-clock-1{
+  @include fontello('\e822');
+}
+
+
+

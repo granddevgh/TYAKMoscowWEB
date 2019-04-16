@@ -1,0 +1,101 @@
+@mixin fontello( $code, $position:before ) {
+  @include fontello-init( $position );
+  @include fontello-content( $code, $position );
+}
+
+
+@mixin fontello-init( $position:before ) {
+  &:#{$position} {
+    font-family: $fontello-font-name;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+
+@mixin fontello-content( $code, $position:before ) {
+  &:#{$position} {
+    content: '#{$code}';
+  }
+}
+
+
+@mixin fontello-margin( $margin:.2em, $position:before ) {
+  &:#{$position} {
+    @if $position == after {
+      margin-left: $margin;
+    }
+    @else {
+      margin-right: $margin;
+    }
+  }
+}
+
+@mixin fontello-color( $color, $position:before ) {
+  &:#{$position} {
+    color: $color;
+  }
+}
+
+@mixin fontello-base64( $code: $fontello-font-base64 ) {
+  font-family: '#{$fontello-font-name}';
+  src: url($code) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/**
+  * position: before | after | both
+ */
+@mixin fontello-produce( $prefix, $map, $margin:.2em, $position: before ) {
+  @if $position == before {
+    @include _fontello-produce( $prefix, $map, $margin, before );
+  }
+  @else if $position == both {
+    @include _fontello-produce( $prefix, $map, $margin, before );
+    @include _fontello-produce( $prefix, $map, $margin, after );
+  }
+  @else {
+    @include _fontello-produce( $prefix, $map, $margin, after );
+  }
+}
+
+@mixin _fontello-produce( $prefix, $map, $margin, $position ) {
+  @if $position == after {
+    .#{$prefix}-after {
+      @include fontello-init( after );
+      @include fontello-margin( $margin, after );
+    }
+  }
+  @else {
+    .#{$prefix} {
+      @include fontello-init();
+      @include fontello-margin( $margin );
+    }
+  }
+
+  @each $name, $value in $map {
+    @if $position == after {
+      .#{$prefix}-#{$name}-after {
+        @include fontello-content( $value, after );
+      }
+    }
+    @else {
+      .#{$prefix}-#{$name} {
+        @include fontello-content( $value );
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.products {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; // for IE
+
+    @media screen  and (max-width: 420px){
+      justify-content: center;
+    }
+
+
+  }
+  &__item {
+    //display: flex;
+    flex-basis: 25%;
+    position: relative;
+    //background-color: #5bd5a0;
+
+
+    &:nth-child(odd) {
+      //background-color: #d6a042;
+    }
+
+
+    &:hover .products__subcategories {
+      max-height: 1000px;
+      padding: 0 0 4px;
+    }
+
+
+    @media screen and (min-width: 992px) and (max-width: 1024px){
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px){
+    }
+    @media screen and (min-width: 667px) and (max-width: 768px){
+    }
+    @media screen and (min-width: 420px) and (max-width: 667px){
+      flex-basis: calc(100%/3);
+    }
+    @media screen  and (max-width: 420px){
+      flex-basis: 180px;
+    }
+
+
+
+  }
+
+  &__subcategories {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    text-transform: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    //margin-left: 10px;
+    //width: 89%;
+  }
+  &__inner {
+    margin:0 10px;
+  }
+
+  &__sublink {
+    display: block;
+    text-align: left;
+    padding-left: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    line-height: 22px;
+    padding-top: 3px;
+    padding-right: 3px;
+    position: relative;
+
+    &:hover {
+      color: yellow;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+
+  }
+
+  &__sublink &__sublink__plus {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    transform: rotate(0deg);
+    transition: 0.5s linear 0s;
+  }
+
+  &__sublink:hover &__sublink__plus {
+    transform: rotate(270deg);
+  }
+
+
+
+
+  &__link {
+    position: relative;
+    display: block;
+    margin: 20px 10px 1px;
+    text-align: center;
+    @include transition(all 0.3s ease);
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    height: 40px;
+    padding: 0 15px 15px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+
+
+
+
+
+
+}

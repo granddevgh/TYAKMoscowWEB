@@ -1,0 +1,123 @@
+
+.slider-brends {
+
+  &__link {
+    text-decoration: none;
+    display: block;
+    color: #707070;
+    font-size: 30px;
+    &:hover {
+      text-decoration: none;
+    }
+
+    & img {
+      width: 50%;
+
+
+      @media screen and (min-width: 420px) and (max-width: 667px) {
+        width: 70%;
+      }
+      @media screen and (max-width: 420px) {
+
+        width: 100%;
+      }
+    }
+  }
+
+
+
+ 
+  & .arrow-prev,
+  & .arrow-next {
+    position: absolute;
+    z-index: 100;
+    margin: -15px 0 0 0;
+    top: 47%;
+  }
+  & .arrow-prev {
+    left: 0;
+  }
+  & .arrow-next {
+    right: 0;
+  }
+
+  & .arrow-next.slick-arrow,
+  & .arrow-prev.slick-arrow {
+    color: $color-darkblue;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+
+    & span {
+      padding: 0px 0 0 0px;
+      cursor: pointer;
+
+    }
+  }
+
+  .slick-dots {
+    left: 0;
+    bottom: 15px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    right: 0;
+    @media screen and (max-width: 1024px) {
+      bottom: -50px;
+    }
+
+    li {
+      display: block;
+
+      &.slick-active button:before {
+        font-size: 30px;
+        color: transparent;
+        border: 2px solid $color-darkblue;
+        border-radius: 50%;
+        opacity: .7;
+      }
+      & button {
+        &:hover,
+        &:focus {
+          &:before {
+            opacity: 1;
+            color: transparent;
+            border: 1px solid $color-darkblue;
+            border-radius: 50%;
+          }
+        }
+
+        &:before {
+          color: $color-darkblue;
+          opacity: .7;
+        }
+
+      }
+
+    }
+  }
+
+  &.slick-dotted.slick-slider {
+    margin-bottom: 55px !important;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      margin-bottom: 35px !important;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px !important;
+
+    }
+
+  }
+
+}
+
+
+
+
+.container_brends {
+  background-color: $color-bg-lightgray;
+  padding: 60px 0;
+}

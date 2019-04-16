@@ -1,0 +1,71 @@
+.header {
+  &__form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    height: 42px;
+  }
+  &__input {
+    height: 42px;
+    width: 0;
+   //padding: 0 42px 0 15px;
+    padding: 0 50px 0 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+    &:focus {
+      width: 280px;
+      z-index: 1;
+      border: 1px solid $color-gray;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+}
+
+  .btn-search {
+    height: 42px;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: transparent;
+    //background-color: #5bd5a0;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+   // padding: 6px 35px 6px 0px;
+  }
+
+
+
+
+
+.search__top {
+    & .header__input,
+    & .btn-search {
+      left: 0!important;
+    }
+  & .header__input {
+    padding: 0 15px 0 80px;
+    &:focus {
+      width: 100%;
+
+    }
+  }
+
+  & .header__form {
+    margin: 20px;
+    width: 80%;
+  }
+
+}

@@ -1,0 +1,71 @@
+<form id="rentalform" autocomplete="off" enctype="multipart/form-data" method="POST" class="validateform">
+
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>"/>
+    <div class="container container_form">
+        <div class="row">
+            <div class="col">
+                <div class="container-fluid wrapper_form">
+                    <div class="row">
+                        <div class="col">
+
+                            <h3 class="depo text-center">
+                                Задать вопрос
+                            </h3>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="resume-success" class="alert alert-success" style="display:none">
+                            Заявка отправлена.
+                        </div>
+                        <div id="resume-error" style="display:none">
+                        </div>
+                    </div>
+                    <div class="row" id="resume-field">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control_color" name="name"
+                                       placeholder="ФИО *"
+                                       required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Телефон *"
+                                       required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control_color" name="email"
+                                       placeholder="E-mail *" required>
+                            </div>
+
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="Ваше сообщение"
+                                      required></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="depo-icheck">
+                                <input type="checkbox" class="skin-square-green" name="service"> Согласен на обработку
+                                моих
+                                персональных данных
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+
+                            <button type="submit" class="btn btn-contacts" id="rentalSubmit" disabled>Отправить</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

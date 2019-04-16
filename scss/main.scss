@@ -1,0 +1,31 @@
+/* ATTENTION! the scss compiler works. can not add styles to /css/main.css */
+@import "variables", "fontello/fontello", "layout", "mixins/common";
+
+@import  "header/common", "footer/common", "menu-main",  "hamburger", "icon-svg", "social", "form";
+
+@import  "card-deck",  "slider-main", "slider-brends", "slider-gallery", "move", "breadcrumb", "component", "map";
+
+@import "page-contacts";
+
+%form-control-zero {
+  border: 4px solid #fff;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  &:hover,
+  &:focus{
+    @extend %form-control-zero;
+    border: 4px solid #004593;
+    background-color: transparent;
+  }
+
+}
+
+
+
+//@import "breadcrumb", "up","modal";
+//, "search"
+//
+// "prodacts-category", "rentals", "partners", "company";
+
+/* ATTENTION! the scss compiler works. can not add styles to /css/main.css */

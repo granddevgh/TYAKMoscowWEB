@@ -1,0 +1,10 @@
+@mixin transition($args...) {
+  transition: ($args);
+  -o-transition: ($args);
+  -moz-transition: ($args);
+  -webkit-transition: ($args);
+  -ms-transition: ($args);
+  -moz-transition: ($args);
+}
+//  @include transition(all 0.3s ease);
+// [ all | продолжительность | стиль движение | задержка ]

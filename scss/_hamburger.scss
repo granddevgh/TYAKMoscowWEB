@@ -1,0 +1,436 @@
+/* ATTENTION! the scss compiler works. can not add styles to /css/main.css */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body.overflow {
+  overflow: hidden;
+}
+
+/*  BURGER
+========================================== */
+.hamburger .icon {
+  color: $color-darkblue;
+}
+
+.burger {
+  //width: 50px;
+  width: 60px;
+  height: 50px;
+  position: fixed;
+  top: 11px;
+  right: 20px;
+  border-radius: 0;
+  z-index: 99999;
+  background-color: $color-darkblue;
+  //position: relative;
+  //top: 2px;
+  //right: 0;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+  @media screen and (max-width: 420px) {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+.burger span {
+  //margin-top: 9px;
+  margin-bottom: 9px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  //margin-left: -15px;
+  margin-left: -20px;
+  margin-top: -1.5px;
+}
+
+.burger span, .burger span::before, .burger span::after {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  outline: 1px solid transparent;
+  -webkit-transition-property: background-color, -webkit-transform;
+  -moz-transition-property: background-color, -moz-transform;
+  -o-transition-property: background-color, -o-transform;
+  transition-property: background-color, transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.burger span::before, .burger span::after {
+  position: absolute;
+  content: "";
+}
+
+.burger span::before {
+  top: -9px;
+}
+
+.burger span::after {
+  top: 9px;
+}
+
+.burger.clicked {
+  background-color: transparent;
+}
+
+.burger.clicked span {
+  background-color: transparent;
+}
+
+.burger.clicked span::before {
+  -webkit-transform: translateY(9px) rotate(45deg);
+  -moz-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger.clicked span::after {
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+  -moz-transform: translateY(-9px) rotate(-45deg);
+  -ms-transform: translateY(-9px) rotate(-45deg);
+  -o-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.burger.clicked span:before, .burger.clicked span:after {
+  background-color: #ffffff;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+/*  NAV
+========================================== */
+nav.hamburger {
+  background-color: $color-darkblue;
+
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 515px;
+  width: 100%;
+  //padding: 100px 40px 60px 40px;
+  overflow-y: auto;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@media screen and (max-width: 667px) {
+  nav.hamburger {
+    padding-top: 90px;
+  }
+}
+
+nav.hamburger.show {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+nav.hamburger.show .hamburger__list li {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(5) {
+  transition-delay: 0.75s;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(6) {
+  transition-delay: 0.9s;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(7) {
+  transition-delay: 1.05s;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(8) {
+  transition-delay: 1.2s;
+}
+
+nav.hamburger.show .hamburger__list li:nth-child(9) {
+  transition-delay: 1.35s;
+}
+
+nav.hamburger.show .about, nav.hamburger.show .hamburger__social, nav.hamburger.show .hamburger__sublist {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  opacity: 1;
+  transition-delay: .85s;
+}
+
+@media (min-width: 667px) {
+  nav.hamburger {
+    padding: 120px 90px 70px 90px;
+  }
+}
+
+nav.hamburger .hamburger__list {
+  list-style-type: none;
+}
+
+nav.hamburger .hamburger__list li {
+  margin-bottom: 20px;
+  -webkit-transform: translateX(40px);
+  -moz-transform: translateX(40px);
+  -ms-transform: translateX(40px);
+  -o-transform: translateX(40px);
+  transform: translateX(40px);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 667px) {
+  nav.hamburger .hamburger__list li {
+    margin-bottom: 0;
+  }
+}
+
+nav.hamburger .hamburger__list li:last-of-type {
+  margin-bottom: 0px;
+}
+
+nav.hamburger .hamburger__list li a {
+  color: #ffffff;
+  font: 500 16px/2 $font-family;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: 5px;
+
+  padding: 10px 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+}
+
+nav.hamburger .hamburger__list li a span {
+  color: #ffff;
+}
+
+nav.hamburger .hamburger__list li a:hover {
+  color: $color-lightblue2;
+}
+
+nav .about {
+  margin-top: 40px;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav .about p {
+  color: #ffffff;
+  font-family: "Spectral", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  line-height: 170%;
+}
+
+nav .hamburger__social {
+  margin-top: 40px;
+  position: relative;
+  padding-bottom: 30px;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav .hamburger__social {
+  fill: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+nav .hamburger__sublist {
+  list-style-type: none;
+  margin-top: 40px;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav .hamburger__sublist li {
+  margin-bottom: 10px;
+}
+
+nav .hamburger__sublist li:last-of-type {
+  margin-bottom: 0px;
+}
+
+nav .hamburger__sublist li a {
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+nav .hamburger__sublist li a:hover {
+  color: #000;
+}
+
+.hamburger__hr {
+  margin-top: 30px;
+  margin-bottom: 35px;
+  border: 0;
+  border-top: 2px solid $color-lightblue2;
+}
+
+/*  OVERLAY
+========================================== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #b7ac7f;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.show {
+  opacity: 0;
+  visibility: visible;
+}
+
+.hamburger__inner {
+  width: max-content;
+  margin: auto;
+}
+
+/* ATTENTION! the scss compiler works. can not add styles to /css/main.css */
+
+/*# sourceMappingURL=test-humburger.css.map */
+
+.hamburger-form {
+  &__list {
+    padding-top: 5px;
+  }
+  &__item {
+    margin-top: 25px;
+  }
+
+}
+
+.hamburger {
+  & .social {
+    text-align: center;
+
+&__list {
+  justify-content: flex-start;
+}
+  }
+
+  .pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 10%;
+    background: url('/img/bg-mobile.jpg') 0 0;
+
+
+    @media  (orientation: landscape){
+margin-top: 50px;
+     position: static;
+      height: 100px;
+
+    }
+
+
+  }
+}

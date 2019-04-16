@@ -1,0 +1,31 @@
+.breadcrumb {
+  justify-content: flex-start;
+  padding: 35px 0 80px;
+  list-style: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-size: 12px;
+  &-item {
+    a {
+      color: #61799b;
+      font-size: 12px;
+      text-decoration: none;
+      //font-weight: 400;
+    }
+
+    &.active {
+      color: #61799b;
+    }
+
+    &+&:before {
+      display: inline-block;
+      padding-right: .5rem;
+      color: #61799b;
+      content: ">";
+    }
+
+  }
+}
+
+

@@ -1,0 +1,253 @@
+.container_slider {
+  @media screen and (max-width: 1024px) {
+    max-width: 100%!important;
+
+  }
+}
+.slider-main {
+
+  &__link {
+    display: block;
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 47%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(91, 213, 160, 0.31);
+  }
+
+  &__title,
+  &__text {
+    color: $color-darkblue;
+    transition: .4s all ease;
+  }
+  &__title {
+    font: 900 28px/1 "Montserrat", sans-serif;
+    margin-bottom: 26px;
+
+
+
+    @media screen and (max-width: 1080px) {
+      font-size: 28px;
+      color: brown;
+
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1079px){
+      font-size: 28px;
+      line-height: 1;
+      margin-right: 20px;
+      color: blue;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px){
+      font-size: 28px;
+      line-height: 1;
+      color: red;
+    }
+
+    @media screen and (min-width: 667px) and (max-width: 768px){
+      font-size: 28px;
+      line-height: 1.2;
+      color: #5bd5a0;
+
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 667px){
+      font-size: 24px;
+      line-height: 1;
+      color: #f68dbb;
+    }
+
+    @media screen and (min-width: 412px) and (max-width: 500px){
+      font-size: 1.8rem;
+      line-height: 1;
+      color: #00a2ff;
+    }
+
+
+    @media screen and (min-width: 300px) and (max-width: 412px){
+      font-size: 1.0rem;
+      line-height: 0.9;
+      color: #5f24c0;
+
+    }
+
+    @media screen  and (max-width: 300px){
+      font-size: 14px;
+      line-height: 0.9;
+      font-weight: 500;
+      //color: #d6a042;
+    }
+
+
+
+
+
+
+  }
+  &__text {
+    font-size: 20px;
+
+    @media screen and (max-width: 1080px) {
+      font-size: 20px;
+      color: brown;
+
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1079px){
+      font-size: 20px;
+      line-height: 1;
+      margin-right: 20px;
+      color: blue;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px){
+      font-size: 20px;
+      line-height: 1;
+      color: red;
+    }
+
+    @media screen and (min-width: 667px) and (max-width: 768px){
+      font-size: 20px;
+      line-height: 1.2;
+      color: #5bd5a0;
+
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 667px){
+      font-size: 16px;
+      line-height: 1;
+      color: #f68dbb;
+    }
+
+    @media screen and (min-width: 412px) and (max-width: 500px){
+      font-size: 16px;
+      line-height: 1;
+      color: #00a2ff;
+    }
+
+
+    @media screen and (min-width: 300px) and (max-width: 412px){
+      font-size: 16px;
+      line-height: 0.9;
+      color: #5f24c0;
+
+    }
+
+    @media screen  and (max-width: 300px){
+      font-size: 16px;
+      line-height: 0.9;
+      font-weight: 500;
+      //color: #d6a042;
+    }
+
+  }
+
+  & .arrow-prev,
+  & .arrow-next {
+    position: absolute;
+    z-index: 100;
+    margin: -15px 0 0 0;
+    top: 47%;
+  }
+  & .arrow-prev {
+    left: 1%;
+  }
+  & .arrow-next {
+    right: 1%;
+  }
+
+  & .arrow-next.slick-arrow,
+  & .arrow-prev.slick-arrow {
+    background-color: rgba(112, 112, 112, 1) !important;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+
+    & span {
+      padding: 0;
+      cursor: pointer;
+
+    }
+  }
+
+  .slick-dots {
+    bottom: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    right: 5%;
+    @media screen and (max-width: 1024px) {
+      //bottom: -25px;
+    }
+
+    li {
+      display: block;
+
+      &.slick-active button:before {
+        font-size: 30px;
+        color: transparent;
+        //border: 5px solid $color-red;
+        box-shadow: inset 0 0 0 5px $color-red;
+        border-radius: 50%;
+        opacity: 1;
+      }
+      & button {
+        &:hover,
+        &:focus {
+          &:before {
+            opacity: 1;
+            color: transparent;
+            //border: 5px solid blue;
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 5px $color-red;
+          }
+        }
+
+        &:before {
+          color: #959595;
+          opacity: 1;
+        }
+
+      }
+
+    }
+  }
+
+  &.slick-dotted.slick-slider {
+    margin-bottom: 0 !important;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      //margin-bottom: 35px !important;
+    }
+    @media screen and (max-width: 768px) {
+      //margin-bottom: 30px !important;
+
+    }
+
+  }
+  .slick-dots li {
+
+    width: 20px;
+    height: 20px;
+    margin: 0 0 8px 0;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,6 @@
+@mixin movesize($width, $height) {
+  opacity: 0;
+  width: $width;
+  height: $height;
+}
+// @include movesize (90px, 49px); //

@@ -1,0 +1,21 @@
+.mobile-location {
+  &__list {
+    //margin-top: 20px;
+  }
+  &__item {
+    @include flex(center, center);
+    height: 55px;
+    background-color: #617a99;
+    &:last-child {
+      background-color: #1c344e;
+    }
+  }
+}
+
+.container {
+  &_mobile-location {
+    @media screen and (min-width: 1075px) {
+      display: none;
+    }
+  }
+}

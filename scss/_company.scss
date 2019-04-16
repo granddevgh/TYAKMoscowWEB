@@ -1,0 +1,53 @@
+.table {
+
+  &_company {
+    & td,
+    & th {
+      color: $color-gray;
+      // padding: .75rem;
+      // vertical-align: top;
+      border-top: 0;
+      border-bottom: 1px solid #dee2e6;
+
+    }
+
+    & th {
+      color: $color-purple;
+      white-space: nowrap;
+      @media screen and (max-width: 420px) {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+    & td {
+      @media screen and (max-width: 420px) {
+
+        padding-top: 0;
+      }
+    }
+
+    a, a:hover {
+      color: $color-gray;
+      text-decoration: none;
+    }
+
+    a {
+      overflow-wrap: break-word;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+
+    tr {
+      @media screen and (max-width: 420px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: stretch;
+        align-items: stretch;
+      }
+
+    }
+
+  }
+}
+

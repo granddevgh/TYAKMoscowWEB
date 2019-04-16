@@ -1,0 +1,14 @@
+@mixin flex ($align-item, $justify-content) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: $align-item;
+    -ms-flex-align: $align-item;
+    align-items: $align-item;
+    -webkit-box-pack: $justify-content;
+    -ms-flex-pack: $justify-content;
+    justify-content: $justify-content;
+
+}
+//  @include flex(flex-start flex-end);
+

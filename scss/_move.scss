@@ -1,0 +1,269 @@
+
+.icon {
+  // block red
+  &_tshirt {
+    @include position(absolute, $bottom: 63px, $right: 100%);
+    @include transition(all 0.3s ease-in-out);
+    @include movesize(83px, 92px);
+    &_fill {
+      fill: #ffd36e;
+      fill-rule: evenodd;
+    }
+  }
+  &_boot {
+    @include position(absolute, $bottom: 52px, $left: 100%);
+    @include transition(all 0.3s ease-in-out);
+    @include movesize(76px, 98px);
+    &_fill {
+      fill: #ffd36e;
+      fill-rule: evenodd;
+    }
+  }
+  &_roof {
+    @include position(absolute, $bottom: 100%, $left: 0);
+    @include transition(all 0.3s ease-in-out 0.2s);
+    @include movesize(283px, 34px);
+    &_fill {
+      fill: #fff;
+      fill-rule: evenodd;
+    }
+  }
+  // block red end
+
+  // block blue
+  &_arm {
+    @include position(absolute, $bottom: 5%, $right: 100%);
+    @include transition(all 0.3s ease-in-out);
+    @include movesize(184px, 42px);
+    &_fill {
+      fill: #4a9fee;
+      fill-rule: evenodd;
+    }
+  }
+  &_dish {
+    @include position(absolute, $bottom: 95%, $left: 35%);
+    @include transition(all 0.3s ease-in-out 0.2s);
+    @include movesize(90px, 49px);
+    &_fill {
+      fill: #4a9fee;
+      fill-rule: evenodd;
+    }
+  }
+  // block blue end
+
+
+
+  // block gray
+
+  &_parachute_big {
+    @include position(absolute, $bottom: 95%, $right: 3%);
+    @include transition(all 0.3s ease-in-out 0.3s);
+    @include movesize(58px, 82px);
+    &_fill {
+      fill: #ffbd23;
+      fill-rule: evenodd;
+    }
+  }
+  &_parachute_sm1 {
+    @include position(absolute, $bottom: 20%, $right: 20%);
+    @include transition(all 0.3s ease-in-out);
+    @include movesize(47px, 66px);
+    &_fill {
+      fill: #ffbd23;
+      fill-rule: evenodd;
+    }
+  }
+  &_parachute_sm2 {
+    @include position(absolute, $bottom: 83%, $left: 3%);
+    @include transition(all 0.3s ease-in-out 0.1s);
+    @include movesize(47px, 66px);
+    &_fill {
+      fill: #ffbd23;
+      fill-rule: evenodd;
+    }
+  }
+
+
+  // block gray end
+
+  // block yellow
+
+  &_parking {
+    @include position(absolute, $bottom: 100%, $left: 13%);
+    @include transition(all 0.3s ease-in-out);
+    @include movesize(198px, 87px);
+    &_fill {
+      fill: #fff;
+      fill-rule: evenodd;
+    }
+  }
+  &_car1 {
+    @include position(absolute, $top: -49px, $left: 20%);
+    @include transition(all 0.3s ease-in-out 0.3s);
+    @include movesize(33px, 60px);
+    &_fill {
+      fill: #4f4f4f;
+      fill-rule: evenodd;
+    }
+  }
+  &_car2 {
+    @include position(absolute, $top: -48px, $left: 67%);
+    @include transition(all 0.3s ease-in-out 0.5s);
+    @include movesize(28px, 61px);
+    &_fill {
+      fill: #4f4f4f;
+      fill-rule: evenodd;
+    }
+  }
+
+
+  // block yellow end
+
+}
+
+.move-block {
+  position: relative;
+  overflow: hidden;
+  @include flex(center, flex-start);
+  flex-direction: column;
+  height: 100%;
+  max-width: 280px;
+  //height: 300px;
+
+  &__title,
+  &__subtitle {
+    position: relative;
+    top: 0;
+    @include transition(0.4s linear);
+    color: #fff;
+    text-align: center;
+  }
+
+  &__title {
+    font: 700 45px/1 $font-family-title;
+    padding: 0;
+    margin: 70px 0 7px;
+    &_text {
+      font-size: 28px;
+    }
+  }
+  &__subtitle {
+    font: 500 18px/1.1 $font-family-title;
+  }
+
+  &__info {
+    font: 500 18px/1.1 $font-family-title;
+    text-transform: none;
+    color: #fff;
+    text-align: center;
+    display: none;
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 27px;
+
+    &_gray {
+      bottom: 50px;
+    }
+  }
+
+  &_red {
+    background-color: $color-red;
+    text-transform: uppercase;
+
+    &:hover {
+      & .icon_tshirt,
+      & .icon_roof,
+      & .icon_boot {
+        opacity: 1;
+      }
+      & .icon_tshirt {
+        @include transform(88%, 0);
+      }
+      & .icon_boot {
+        @include transform(-90%, 0);
+      }
+      & .icon_roof {
+        @include transform(0, 100%);
+      }
+
+      .move-block__title,
+      .move-block__subtitle {
+        top: -5px;
+      }
+
+      .move-block__info {
+        display: block;
+      }
+    }
+  }
+
+  &_blue {
+    background-color: $color-lightblue;
+    text-transform: uppercase;
+
+    &:hover {
+      & .icon_arm,
+      & .icon_dish {
+        opacity: 1;
+      }
+      & .icon_arm {
+        @include transform(100%, 0);
+      }
+      & .icon_dish {
+        @include transform(0, 100%);
+      }
+
+      .move-block__title,
+      .move-block__subtitle {
+        top: -5px;
+      }
+
+    }
+  }
+
+  &_yellow {
+    background-color: $color-yellow;
+    text-transform: uppercase;
+
+    &:hover {
+      & .icon_parking,
+      & .icon_car1,
+      & .icon_car2 {
+        opacity: 1;
+        @include transform(0, 100%);
+      }
+
+      .move-block__title,
+      .move-block__subtitle {
+        top: 30px;
+      }
+
+    }
+  }
+
+  &_gray {
+    background-color: $color-grayblue;
+    text-transform: uppercase;
+
+    &:hover {
+      & .icon_parachute_big,
+      & .icon_parachute_sm1,
+      & .icon_parachute_sm2 {
+        opacity: 1;
+        @include transform(0, 100%);
+      }
+
+      .move-block__title,
+      .move-block__subtitle {
+        top: -5px;
+      }
+
+      .move-block__info {
+        display: block;
+      }
+    }
+  }
+
+}
+

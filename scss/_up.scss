@@ -1,0 +1,31 @@
+
+#buttonUp {
+  z-index: 5;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  //padding: 4px;
+  cursor: pointer;
+  display: none;
+  border-radius: 50%;
+  background-color: rgba(112, 112, 112, 0.51);
+  a {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 13px;
+
+  &:hover {
+      text-decoration: none;
+    }
+  }
+  & .icon {
+    line-height: 1;
+    color: #760a5f;
+    margin-bottom: -5px;
+  }
+}

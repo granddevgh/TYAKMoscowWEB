@@ -1,0 +1,155 @@
+.social {
+  &__link {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    line-height: 34px;
+    margin: 0;
+    color: $color-darkblue;
+    text-decoration: none !important;
+    border: none;
+    transition: 0.4s ease;
+
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+    &:hover {
+      background-color: $color-lightblue2;
+      color: $color-darkblue;
+    }
+  }
+
+}
+
+.footer {
+  .social {
+    margin-bottom: 35px;
+  }
+}
+
+
+
+
+
+.social {
+
+  &__list {
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+   // width: 216px;
+    margin-bottom: 0;
+
+    &:after {
+      //display: none;
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__item {
+    float: left;
+    margin-left: 6px;
+    list-style-type: none;
+  }
+
+
+  &__link {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #112236;
+    text-align: center;
+    transition: 0.4s ease;
+
+    &:hover {
+      background-color: #112236;
+      border: 1px solid #112236;
+
+      &  .icon-svg {
+        fill: white;
+      }
+    }
+
+    &_svg {
+      transition: 0.4s ease;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #3d4252;
+        border-color: #3d4252;
+        transition: 0.4s ease;
+      }
+      &:hover {
+        background: transparent !important;
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+
+      & svg {
+        z-index: 2;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+.icon-svg {
+  fill: #112236;
+  transition: 0.1s ease;
+
+  &.icon-vk {
+    font-size: 20px;
+  }
+
+  &.icon-facebook {
+    font-size: 18px;
+  }
+
+  &.icon-instagram {
+    font-size: 16px;
+  }
+
+  &.icon-youtube {
+    font-size: 20px;
+  }
+
+  &.icon-odnoklassniki {
+    font-size: 20px;
+  }
+}
+
+
+
+
